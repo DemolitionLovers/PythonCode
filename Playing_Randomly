@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-import os
-import sys
 import time
 import random
 
 
-def Prandom():
-  array1 = [
+def rand_string():
+  char_list = [
       'a', 'b', 'c', 'd', 'e', 'f', 'g',
       'h', 'i', 'j', 'k', 'l', 'm', 'n',
       'o', 'p', 'q', 'r', 's', 't', 'u',
@@ -28,25 +26,20 @@ def Prandom():
       '<', '>', '?', '|', '¬',
     ]
 
-  to_print = random.choice(array1) + random.choice(array1)
+  to_print = random.choice(char_list) + random.choice(char_list)
 
   for i in range(26):
-    to_print = to_print + random.choice(array1)
+    to_print = to_print + random.choice(char_list)
 
   return to_print
 
 
-
-def Main():
+def main():
   while True:
-    os.system('clear; clear')
-
     for i in range(10):
-      print(Prandom())
-
+      print(rand_string())
     time.sleep(0.1)
 
 
-
 if __name__ == '__main__':
-  Main()
+  main()
